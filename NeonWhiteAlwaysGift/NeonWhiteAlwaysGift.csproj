@@ -3,8 +3,7 @@
     <PropertyGroup>
         <!-- three versions instead of four like most NET apps -->
         <Version>1.0.0</Version>
-        <AssemblyName>NeonWhitePlugin</AssemblyName>
-        <Product>NeonWhitePlugin</Product>
+        <Product>NeonWhiteAlwaysGift</Product>
         <Authors>Aly</Authors>
 
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,6 +15,7 @@
             https://nuget.bepinex.dev/v3/index.json;
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
+        <PackageId>NeonWhiteAlwaysGift</PackageId>
     </PropertyGroup>
 
     <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
@@ -61,6 +61,6 @@
 
     <!-- auto copy to bepinex folder; you don't need this but it's helpful -->
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="xcopy /Y /I &quot;$(TargetDir)&quot; &quot;$(NeonWhitePath)/BepInEx/plugins/NeonWhitePlugin&quot;" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))'" />
+        <Exec Command="xcopy /Y /I &quot;$(TargetDir)&quot; &quot;$(NeonWhitePath)/BepInEx/plugins/NeonWhiteAlwaysGift&quot;" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))'" />
     </Target>
 </Project>

@@ -3,11 +3,11 @@ using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 
-namespace NeonWhitePlugin;
+namespace NeonWhiteAlwaysGift;
 
 [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
 [BepInProcess("Neon White.exe")]
-public class NeonWhitePlugin : BaseUnityPlugin {
+public class NeonWhiteAlwaysGift : BaseUnityPlugin {
     public static ManualLogSource Log;
     public static Harmony Harmony = new(PluginInfo.PLUGIN_GUID);
     
